@@ -1,0 +1,63 @@
+/* general config */
+a {
+    color: var(--text-color);
+}
+
+
+/* Colors */
+
+:root {
+    --main-color: #202C33;
+    --secondary-color: #111B21;
+    --sent-message-color: #005C4B;
+    --text-color: #A5B1B8;
+    --notify-color: #8edafc;
+}
+
+body {
+    background-color: var(--secondary-color);
+}
+
+.container {
+    color: var(--text-color);
+}
+
+#top-aside {
+    background-color: var(--main-color);
+}
+
+/* aside config */
+aside {
+    width: 30%;
+}
+
+/* Img box config */
+.imgBox {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.imgBox>img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.imgBox i {
+    color: var(--notify-color);
+}
+
+
+/* Alert section config */
+#alertMsg {
+    background-color: var(--notify-color);
+}
+
+
+/* Hover settings */
+i:hover {
+    cursor: pointer;
+}

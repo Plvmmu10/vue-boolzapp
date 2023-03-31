@@ -15,7 +15,49 @@
 </head>
 
 <body>
+    <div id="app">
+        <div class="container mt-5">
+            <!-- starts of aside part, where we have top-aside and bottom-aside -->
+            <aside>
+                <!-- top aside -->
+                <div id="top-aside" class="d-flex flex-column">
+                    <div id="user-info" class="d-flex justify-content-between align-items-center p-3">
+                        <!-- Div with user image and name -->
+                        <div class="d-flex align-items-center">
+                            <div class="imgBox me-3">
+                                <img src="./img/avatar_7.jpg" alt="">
+                            </div>
 
+                            <h5>Giuseppe</h5>
+                        </div>
+
+                        <!-- Div with all the icons -->
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-message px-3"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- bottom aside with contact list-->
+
+                <!-- alert message -->
+                <div id="alertMsg" class="p-3 d-flex align-items-center">
+                    <!-- notify icon -->
+                    <div class="imgBox me-3 bg-white d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
+
+                    <!-- notify message with a -->
+                    <div class="d-flex flex-column">
+                        <p class="text-black m-0"><strong>Ricevi notifiche di nuovi messaggi</strong></p>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
