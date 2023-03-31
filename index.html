@@ -43,7 +43,7 @@
                 <!-- bottom aside with contact list-->
 
                 <!-- alert message -->
-                <div id="alertMsg" class="p-3 d-flex align-items-center">
+                <div id="alertMsg" class="p-2 d-flex align-items-center">
                     <!-- notify icon -->
                     <div class="imgBox me-3 bg-white d-flex justify-content-center align-items-center">
                         <i class="fa-solid fa-bell-slash"></i>
@@ -53,6 +53,40 @@
                     <div class="d-flex flex-column">
                         <p class="text-black m-0"><strong>Ricevi notifiche di nuovi messaggi</strong></p>
                         <a href="#">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+
+                <!-- searchbar div, with searchbar icon and input -->
+                <div class="p-2">
+                    <div id="searchBar" class="p-2 rounded-2 me-3 d-flex">
+                        <!-- searchBar icon -->
+                        <div class="me-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+
+
+                        <div>
+                            <input type="text" class="bg-transparent border-0"
+                                placeholder="Cerca o inizia una nuova chat">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Contact List -->
+                <div id="contactContainer" v-for="(contact, index) in contacts">
+                    <div class="contactItem d-flex ">
+                        <div class="imgBoxcontainer d-flex justify-content-center align-items-center">
+                            <div class="imgBox me-3">
+                                <img :src="contact.avatar" :alt="contact.name">
+                            </div>
+                        </div>
+
+
+                        <div class="d-flex flex-column">
+                            <p class="text-black m-0 pt-2"><strong>{{contact.name}}</strong></p>
+                            <p class="subtitle">Ultimo messaggio inviato</p>
+                        </div>
                     </div>
                 </div>
             </aside>

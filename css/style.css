@@ -3,6 +3,10 @@ a {
     color: var(--text-color);
 }
 
+.subtitle {
+    font-size: 14px;
+}
+
 
 /* Colors */
 
@@ -28,8 +32,14 @@ body {
 
 /* aside config */
 aside {
-    width: 30%;
+    width: 400px;
 }
+
+/* searchbar config */
+#searchBar {
+    background-color: var(--main-color);
+}
+
 
 /* Img box config */
 .imgBox {
@@ -55,6 +65,13 @@ aside {
 #alertMsg {
     background-color: var(--notify-color);
 }
+
+/* Contact section config */
+#contactContainer {
+    background-color: var(--secondary-color);
+    overflow-y: scroll;
+}
+
 
 
 /* Hover settings */
