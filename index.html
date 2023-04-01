@@ -16,7 +16,7 @@
 
 <body>
     <div id="app">
-        <div class="container mt-5">
+        <div class="mycontainer">
             <!-- starts of aside part, where we have top-aside and bottom-aside -->
             <aside>
                 <!-- top aside -->
@@ -58,15 +58,15 @@
 
                 <!-- searchbar div, with searchbar icon and input -->
                 <div class="p-2">
-                    <div id="searchBar" class="p-2 rounded-2 me-3 d-flex">
+                    <div id="searchBar" class="p-2 rounded-2 me-3 d-flex w-100">
                         <!-- searchBar icon -->
                         <div class="me-2 d-flex align-items-center justify-content-center">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
 
-
-                        <div>
-                            <input type="text" class="bg-transparent border-0"
+                        <!-- searchBar input -->
+                        <div class="w-75">
+                            <input type="text" class="bg-transparent border-0 w-100"
                                 placeholder="Cerca o inizia una nuova chat">
                         </div>
                     </div>
@@ -74,8 +74,8 @@
 
 
                 <!-- Contact List -->
-                <div id="contactContainer" v-for="(contact, index) in contacts">
-                    <div class="contactItem d-flex ">
+                <div id="contactContainer">
+                    <div class="contactItem d-flex" v-for="(contact, i) in contacts" :key="i">
                         <div class="imgBoxcontainer d-flex justify-content-center align-items-center">
                             <div class="imgBox me-3">
                                 <img :src="contact.avatar" :alt="contact.name">
@@ -85,7 +85,7 @@
 
                         <div class="d-flex flex-column">
                             <p class="text-black m-0 pt-2"><strong>{{contact.name}}</strong></p>
-                            <p class="subtitle">Ultimo messaggio inviato</p>
+                            <p class="subtitle">{{contact.messages[contact.messages.length -1].message}}</p>
                         </div>
                     </div>
                 </div>
