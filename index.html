@@ -75,8 +75,8 @@
 
                 <!-- Contact List -->
                 <div id="contactContainer">
-                    <div class="contactItem d-flex" v-for="(contact, i) in contacts" :key="i" @click="selectedChat(i)"
-                        :class="i === activeChat ? 'active':''">
+                    <div class="contactItem d-flex p-1" v-for="(contact, i) in contacts" :key="i"
+                        @click="selectedChat(i)" :class="i === activeChat ? 'active':''">
                         <div class="imgBoxcontainer d-flex align-items-center">
                             <div class="imgBox me-3">
                                 <img :src="contact.avatar" :alt="contact.name">
@@ -117,7 +117,7 @@
                         <!-- Active chat friend name and date -->
                         <div>
                             <div class="d-flex flex-column">
-                                <p class="text-white m-0 pt-2"><strong>{{contacts[activeChat].name}}</strong></p>
+                                <p class="text-white m-0"><strong>{{contacts[activeChat].name}}</strong></p>
                                 <p class="date">Ultimo accesso
                                     alle {{contacts[activeChat].messages[contacts[activeChat].messages.length
                                     -1].date}}</p>
@@ -134,6 +134,20 @@
                     </div>
 
                 </div>
+
+
+                <!-- Chat body with messages -->
+                <div id="chatUserContainer">
+                    <div id="chat-body">
+                        <div class="messageContainer" v-for="(message, i) in contacts[activeChat].messages" :key="i">
+                            <div class="message" :class="message.status === 'sent' ? 'messageSent':'messageReceived'">
+                                <p>{{message.message}}</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

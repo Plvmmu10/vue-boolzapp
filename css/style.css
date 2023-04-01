@@ -38,12 +38,13 @@ body {
 .mycontainer {
     color: var(--text-color);
     width: 85%;
-    margin: 5rem auto;
-    border: 2px solid black;
+    height: 700px;
+    margin: 1.5rem auto;
 }
 
 #top-aside {
     background-color: var(--main-color);
+    height: 80px;
 }
 
 /* aside config */
@@ -82,12 +83,14 @@ aside {
 /* Alert section config */
 #alertMsg {
     background-color: var(--notify-color);
+    height: 80px;
 }
 
 /* Contact section config */
 #contactContainer {
     background-color: var(--secondary-color);
-    overflow-y: auto;
+    height: calc(100% - 160px);
+    overflow: auto;
 }
 
 .contactItem {
@@ -112,9 +115,42 @@ i:hover {
 
 .chatContainer {
     width: 75%;
+    background-image: url(../img/blackthemebg.jpg);
 }
 
 #chat-top {
+    height: 80px;
     width: 100%;
-    border-bottom: 2px solid black;
+    background-color: var(--main-color);
+}
+
+#chatUserContainer {
+    width: 100%;
+    height: calc(100% - 160px);
+    overflow: auto;
+}
+
+
+/* Message config */
+.messageContainer {
+    display: flex;
+    flex-flow: column;
+}
+
+.message {
+    padding: .5rem;
+    margin: .5rem;
+    width: 30%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.messageSent {
+    background-color: var(--sent-message-color);
+    align-self: flex-end;
+}
+
+.messageReceived {
+    background-color: var(--main-color);
 }
