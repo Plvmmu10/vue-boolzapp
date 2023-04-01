@@ -163,7 +163,8 @@
                     <!-- Div with chat footer input -->
                     <div id="sendContainer">
                         <input type="text" name="sendMessage" id="sendMessage"
-                            class="border-0 w-100 text-white p-2 rounded-2" placeholder="Cerca o inizia una nuova chat">
+                            class="border-0 w-100 text-white p-2 rounded-2" placeholder="Cerca o inizia una nuova chat"
+                            v-model="newMsg" @keyup.enter="newText">
                     </div>
 
                     <div class="footer-icons mx-2 d-flex align-items-center justify-content-center h-100">

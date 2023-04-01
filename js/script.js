@@ -174,12 +174,34 @@ createApp({
                     ],
                 }
             ],
-            activeChat: 0
+            activeChat: 0,
+            newMsg: ''
         }
     },
     methods: {
         selectedChat(index) {
             this.activeChat = index;
+        },
+        newText() {
+            const destination = this.contacts[this.activeChat];
+
+            this.newMessage = {
+                date: 'now',
+                message: this.newMsg,
+                status: 'sent'
+            }
+
+            this.defaultAnswer = {
+                date: 'now',
+                message: 'ok',
+                status: 'received'
+            }
+
+            if (this.newMsg != '') {
+                destination.messages.push(this.newMessage);
+                this.newMsg = '';
+                setTimeout(() => destination.messages.push(this.defaultAnswer), 1000);
+            }
         }
     }
 }).mount('#app');
