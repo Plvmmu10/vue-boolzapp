@@ -61,13 +61,16 @@
                     <div id="searchBar" class="p-2 rounded-2 me-3 d-flex w-100">
                         <!-- searchBar icon -->
                         <div class="me-2 d-flex align-items-center justify-content-center">
-                            <label for=""></label>
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <label for="searchUser">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </label>
+
                         </div>
 
                         <!-- searchBar input -->
-                        <div class="w-100">
-                            <input type="text" name="searchUser" id="searchUser" class="bg-transparent border-0 w-100"
+                        <div class="w-100 ">
+                            <input type="text" name="searchUser" id="searchUser"
+                                class="bg-transparent border-0 w-100 text-white"
                                 placeholder="Cerca o inizia una nuova chat">
                         </div>
                     </div>
@@ -130,7 +133,7 @@
                     <!-- Active chat icons -->
                     <div>
                         <i class="fa-solid fa-magnifying-glass px-3"></i>
-                        <!-- <i class="fa-solid fa-paperclip px-3"></i> -->
+
                         <i class="fa-solid fa-ellipsis-vertical px-3"></i>
                     </div>
 
@@ -150,7 +153,22 @@
                 </div>
 
                 <!-- Chat footer with input and icons -->
-                <div id="chat-footer">
+                <div id="chat-footer" class="d-flex align-items-center">
+                    <!-- Div with chat footer icons -->
+                    <div class="footer-icons mx-2 d-flex align-items-center justify-content-center h-100">
+                        <i class="fa-solid fa-smile"></i>
+                        <i class="fa-solid fa-paperclip px-3"></i>
+                    </div>
+
+                    <!-- Div with chat footer input -->
+                    <div id="sendContainer">
+                        <input type="text" name="sendMessage" id="sendMessage"
+                            class="border-0 w-100 text-white p-2 rounded-2" placeholder="Cerca o inizia una nuova chat">
+                    </div>
+
+                    <div class="footer-icons mx-2 d-flex align-items-center justify-content-center h-100">
+                        <i class="fa-solid fa-microphone mx-3"></i>
+                    </div>
 
                 </div>
 
