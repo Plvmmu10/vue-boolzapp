@@ -33,14 +33,13 @@ a {
 
 body {
     background-color: var(--secondary-color);
-    overflow: hidden;
 }
 
 .mycontainer {
     color: var(--text-color);
     width: 85%;
     margin: 5rem auto;
-    height: 100vh;
+    border: 1px solid black;
 }
 
 #top-aside {
@@ -50,6 +49,8 @@ body {
 /* aside config */
 aside {
     width: 400px;
+    height: 100%;
+    border-right: 1px solid black;
 }
 
 /* searchbar config */
@@ -86,8 +87,11 @@ aside {
 /* Contact section config */
 #contactContainer {
     background-color: var(--secondary-color);
-    height: 200px;
-    overflow-y: auto;
+    overflow-y: scroll;
+}
+
+.date {
+    font-size: 10px;
 }
 
 /* Hover settings */
