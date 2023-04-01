@@ -33,7 +33,7 @@
 
                         <!-- Div with all the icons -->
                         <div>
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-circle-notch"></i>
                             <i class="fa-solid fa-message px-3"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
@@ -146,7 +146,15 @@
                         <div class="messageContainer" v-for="(message, i) in contacts[activeChat].messages" :key="i">
                             <div class="message" :class="message.status === 'sent' ? 'messageSent':'messageReceived'">
                                 <p class="m-0">{{message.message}}</p>
-                                <p class="subtitle align-self-end m-0">{{message.date}}</p>
+                                <div class="align-self-end d-flex">
+                                    <p class="subtitle  m-0">{{message.date}}</p>
+                                    <!-- <select name="msgOption" id="msgOption" class="bg-transparent border-0 text-white">
+                                        <option value="none"></option>
+                                        <option value="delete" class="text-black" @click="deleteMessage(i)">Delete
+                                        </option>
+                                    </select> -->
+                                </div>
+
                             </div>
                         </div>
                     </div>

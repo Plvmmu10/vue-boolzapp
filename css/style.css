@@ -38,8 +38,8 @@ body {
 .mycontainer {
     color: var(--text-color);
     width: 85%;
-    height: 700px;
-    margin: 1.5rem auto;
+    height: 90vh;
+    margin: 1rem auto;
 }
 
 #top-aside {

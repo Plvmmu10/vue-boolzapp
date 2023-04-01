@@ -172,7 +172,53 @@ createApp({
                             status: 'received'
                         }
                     ],
-                }
+                },
+                {
+                    id: 9,
+                    name: 'Gabriele',
+                    avatar: './img/avatar_4.jpg',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '10/01/2020 15:30:55',
+                            message: 'Ciao, andiamo a mangiare un arancino stasera?',
+                            status: 'received'
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            message: 'Assolutamente si!',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:51:00',
+                            message: 'Perfetto',
+                            status: 'received'
+                        }
+                    ],
+                },
+                {
+                    id: 10,
+                    name: 'Amore',
+                    avatar: './img/avatar_6.jpg',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '10/01/2020 15:30:55',
+                            message: 'Andiamo a mangiare una pizza?',
+                            status: 'received'
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            message: 'No, sta sera esco con Gabriele',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:51:00',
+                            message: 'Non ti amo più',
+                            status: 'received'
+                        }
+                    ],
+                },
             ],
             activeChat: 0,
             newMsg: ''
@@ -202,6 +248,10 @@ createApp({
                 this.newMsg = '';
                 setTimeout(() => destination.messages.push(this.defaultAnswer), 1000);
             }
-        }
+        },
+        // deleteMessage(index) {
+        //     const destination = this.contacts[this.activeChat];
+        //     destination.messages.splice(index, 1)
+        // }
     }
 }).mount('#app');
