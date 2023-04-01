@@ -7,6 +7,19 @@ a {
     font-size: 14px;
 }
 
+/* Scrollbar config */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
+
+}
 
 /* Colors */
 
@@ -20,10 +33,14 @@ a {
 
 body {
     background-color: var(--secondary-color);
+    overflow: hidden;
 }
 
-.container {
+.mycontainer {
     color: var(--text-color);
+    width: 85%;
+    margin: 5rem auto;
+    height: 100vh;
 }
 
 #top-aside {
@@ -69,10 +86,9 @@ aside {
 /* Contact section config */
 #contactContainer {
     background-color: var(--secondary-color);
-    overflow-y: scroll;
+    height: 200px;
+    overflow-y: auto;
 }
-
-
 
 /* Hover settings */
 i:hover {
