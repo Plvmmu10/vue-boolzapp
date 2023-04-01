@@ -16,7 +16,7 @@
 
 <body>
     <div id="app">
-        <div class="mycontainer">
+        <div class="mycontainer d-flex">
             <!-- starts of aside part, where we have top-aside and bottom-aside -->
             <aside>
                 <!-- top aside -->
@@ -75,7 +75,8 @@
 
                 <!-- Contact List -->
                 <div id="contactContainer">
-                    <div class="contactItem d-flex" v-for="(contact, i) in contacts" :key="i">
+                    <div class="contactItem d-flex" v-for="(contact, i) in contacts" :key="i" @click="selectedChat(i)"
+                        :class="i === activeChat ? 'active':''">
                         <div class="imgBoxcontainer d-flex align-items-center">
                             <div class="imgBox me-3">
                                 <img :src="contact.avatar" :alt="contact.name">
@@ -99,6 +100,41 @@
                     </div>
                 </div>
             </aside>
+
+            <!-- Chat container that has a chat-top, chat-body and chat-footer -->
+            <div class="chatContainer">
+
+                <!-- Chat Top with friend img, username and last access date and icons -->
+                <div id="chat-top" class="p-3 d-flex align-items-center justify-content-between">
+
+                    <div class="d-flex">
+                        <!-- Active chat friend img -->
+                        <div class="imgBoxcontainer d-flex align-items-center">
+                            <div class="imgBox me-3">
+                                <img :src="contacts[activeChat].avatar" :alt="">
+                            </div>
+                        </div>
+                        <!-- Active chat friend name and date -->
+                        <div>
+                            <div class="d-flex flex-column">
+                                <p class="text-white m-0 pt-2"><strong>{{contacts[activeChat].name}}</strong></p>
+                                <p class="date">Ultimo accesso
+                                    alle {{contacts[activeChat].messages[contacts[activeChat].messages.length
+                                    -1].date}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Active chat icons -->
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip px-3"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 

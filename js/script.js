@@ -173,10 +173,13 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
+            activeChat: 0
         }
     },
     methods: {
-
+        selectedChat(index) {
+            this.activeChat = index;
+        }
     }
 }).mount('#app');

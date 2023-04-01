@@ -48,7 +48,7 @@ body {
 
 /* aside config */
 aside {
-    width: 400px;
+    width: 35%;
     height: 100%;
     border-right: 2px solid black;
 }
@@ -92,6 +92,7 @@ aside {
 
 .contactItem {
     margin: 0 1rem;
+    cursor: pointer;
 }
 
 .date {
@@ -101,4 +102,19 @@ aside {
 /* Hover settings */
 i:hover {
     cursor: pointer;
+}
+
+
+/* Chat config */
+.active {
+    background-color: var(--main-color);
+}
+
+.chatContainer {
+    width: 75%;
+}
+
+#chat-top {
+    width: 100%;
+    border-bottom: 2px solid black;
 }
