@@ -45,18 +45,19 @@ body {
 #top-aside {
     background-color: var(--main-color);
     height: 80px;
+    border-right: 2px solid black;
 }
 
 /* aside config */
 aside {
     width: 35%;
     height: 100%;
-    border-right: 2px solid black;
 }
 
 /* searchbar config */
 #searchBar {
     background-color: var(--main-color);
+    height: 40px;
 }
 
 
@@ -89,13 +90,14 @@ aside {
 /* Contact section config */
 #contactContainer {
     background-color: var(--secondary-color);
-    height: calc(100% - 160px);
+    height: calc(100% - 216px);
     overflow: auto;
 }
 
 .contactItem {
-    margin: 0 1rem;
+    padding: 0 1rem;
     cursor: pointer;
+    border-bottom: 1px solid var(--text-color);
 }
 
 .date {
@@ -107,14 +109,17 @@ i:hover {
     cursor: pointer;
 }
 
+.contactItem:hover {
+    background-color: rgba(32, 44, 51, .5);
+}
 
 /* Chat config */
 .active {
-    background-color: var(--main-color);
+    background-color: rgba(32, 44, 51, 1);
 }
 
 .chatContainer {
-    width: 75%;
+    width: 100%;
     background-image: url(../img/blackthemebg.jpg);
 }
 
@@ -139,11 +144,13 @@ i:hover {
 
 .message {
     padding: .5rem;
-    margin: .5rem;
+    margin: 1rem 1rem 0 1rem;
     width: 30%;
     border-radius: 10px;
     display: flex;
-    align-items: center;
+    align-items: start;
+    flex-flow: column;
+    color: white;
 }
 
 .messageSent {
@@ -152,5 +159,11 @@ i:hover {
 }
 
 .messageReceived {
+    background-color: var(--main-color);
+}
+
+/* Chat footer config */
+#chat-footer {
+    height: 80px;
     background-color: var(--main-color);
 }
