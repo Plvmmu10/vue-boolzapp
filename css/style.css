@@ -184,3 +184,15 @@ i:hover {
 #sendMessage {
     background-color: var(--secondary-color);
 }
+
+
+@media screen and (max-width: 1149px) {
+
+    .fa-circle-notch,
+    .fa-message,
+    #topChatIcons>.fa-magnifying-glass,
+    h5,
+    .date {
+        display: none;
+    }
+}

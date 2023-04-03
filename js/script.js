@@ -233,23 +233,29 @@ createApp({
         newText() {
             const destination = this.contacts[this.activeChat];
 
-            this.newMessage = {
-                date: 'now',
-                message: this.newMsg,
-                status: 'sent'
-            }
-
-            this.defaultAnswer = {
-                date: 'now',
-                message: 'ok',
-                status: 'received'
-            }
 
             if (this.newMsg != '') {
+                let hours = new Date().getHours();
+                let minutes = new Date().getMinutes();
+
+                this.newMessage = {
+                    date: hours + ':' + minutes,
+                    message: this.newMsg,
+                    status: 'sent'
+                }
+
+                this.defaultAnswer = {
+                    date: hours + ':' + minutes,
+                    message: 'ok',
+                    status: 'received'
+                }
+
                 destination.messages.push(this.newMessage);
                 this.newMsg = '';
                 setTimeout(() => destination.messages.push(this.defaultAnswer), 1000);
             }
+
+
         },
         searchChat() {
             if (this.searched.value === '') {
@@ -272,7 +278,7 @@ createApp({
                     }
                 });
             }
-            console.log(this.searchFiltered)
+            console.log(this.searchFilter)
         }
     }
 }).mount('#app');

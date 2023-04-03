@@ -32,7 +32,7 @@
                         </div>
 
                         <!-- Div with all the icons -->
-                        <div>
+                        <div id="topAsideIcons">
                             <i class="fa-solid fa-circle-notch"></i>
                             <i class="fa-solid fa-message px-3"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -50,7 +50,7 @@
                     </div>
 
                     <!-- notify message with a -->
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column notifyMsg">
                         <p class="text-black m-0"><strong>Ricevi notifiche di nuovi messaggi</strong></p>
                         <a href="#">Attiva notifiche desktop</a>
                     </div>
@@ -116,7 +116,7 @@
                         <!-- Active chat friend img -->
                         <div class="imgBoxcontainer d-flex align-items-center">
                             <div class="imgBox me-3">
-                                <img :src="contacts[activeChat].avatar" :alt="">
+                                <img :src="contacts[activeChat].avatar" :alt="contacts[activeChat].name">
                             </div>
                         </div>
                         <!-- Active chat friend name and date -->
@@ -132,7 +132,7 @@
 
 
                     <!-- Active chat icons -->
-                    <div>
+                    <div id="topChatIcons">
                         <i class="fa-solid fa-magnifying-glass px-3"></i>
 
                         <i class="fa-solid fa-ellipsis-vertical px-3"></i>
