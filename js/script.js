@@ -221,7 +221,9 @@ createApp({
                 },
             ],
             activeChat: 0,
-            newMsg: ''
+            newMsg: '',
+            searched: '',
+            searchFiltered: ''
         }
     },
     methods: {
@@ -249,9 +251,28 @@ createApp({
                 setTimeout(() => destination.messages.push(this.defaultAnswer), 1000);
             }
         },
-        // deleteMessage(index) {
-        //     const destination = this.contacts[this.activeChat];
-        //     destination.messages.splice(index, 1)
-        // }
+        searchChat() {
+            if (this.searched.value === '') {
+                this.searchFiltered = this.contacts;
+            } else {
+                this.searchFiltered = this.contacts.filter((contact) => {
+                    if (
+                        contact.name
+                            .toLowerCase()
+                            .includes(this.searched.toLowerCase()) ||
+
+                        contact.messages.some((text) =>
+                            text.message
+                                .toLowerCase()
+                                .includes(this.searched.toLowerCase())
+
+                        )
+                    ) {
+                        return true;
+                    }
+                });
+            }
+            console.log(this.searchFiltered)
+        }
     }
 }).mount('#app');

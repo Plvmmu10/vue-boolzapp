@@ -85,6 +85,7 @@ aside {
 #alertMsg {
     background-color: var(--notify-color);
     height: 80px;
+    width: 100%;
 }
 
 /* Contact section config */
@@ -127,6 +128,10 @@ i:hover {
     height: 80px;
     width: 100%;
     background-color: var(--main-color);
+}
+
+#dateUser {
+    font-size: 16px;
 }
 
 #chatUserContainer {
