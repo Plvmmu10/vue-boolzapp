@@ -43,7 +43,7 @@
                 <!-- bottom aside with contact list-->
 
                 <!-- alert message -->
-                <div id="alertMsg" class="p-2 d-flex align-items-center">
+                <div id="alertMsg" class="p-2 d-flex align-items-center d-none d-lg-flex">
                     <!-- notify icon -->
                     <div class="imgBox me-3 bg-white d-flex justify-content-center align-items-center">
                         <i class="fa-solid fa-bell-slash"></i>
@@ -123,7 +123,7 @@
                         <div>
                             <div class="d-flex flex-column">
                                 <p class="text-white m-0"><strong>{{contacts[activeChat].name}}</strong></p>
-                                <p id="dateUser">Ultimo accesso
+                                <p id="dateUser" class="d-none d-md-flex">Ultimo accesso
                                     alle {{contacts[activeChat].messages[contacts[activeChat].messages.length
                                     -1].date}}</p>
                             </div>
