@@ -131,7 +131,7 @@
                     </div>
 
 
-                    <!-- Active chat icons -->
+                    <!-- Active chat icons and change theme option -->
                     <div id="topChatIcons">
                         <i class="fa-solid fa-magnifying-glass px-3"></i>
 
@@ -172,7 +172,8 @@
                     </div>
 
                     <div class="footer-icons mx-2 d-flex align-items-center justify-content-center h-100">
-                        <i class="fa-solid fa-microphone mx-3"></i>
+                        <i class="fa-solid fa-microphone mx-3" :class="newMsg != '' ? 'd-none' : ''"></i>
+                        <i class="fa-solid fa-paper-plane mx-3" :class="newMsg === '' ? 'd-none': 'd-block'"></i>
                     </div>
 
                 </div>

@@ -224,6 +224,7 @@ createApp({
             newMsg: '',
             searched: '',
             searchFiltered: ''
+
         }
     },
     methods: {
