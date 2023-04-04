@@ -231,7 +231,7 @@ createApp({
         selectedChat(index) {
             this.activeChat = this.contacts.findIndex(item => item.id === index);
 
-            this.selectPerson = this.contacts.find(item => item.id === index).id;
+            this.selectPerson = this.activeChat[item].id;
         },
         newText() {
             const destination = this.contacts[this.activeChat];
